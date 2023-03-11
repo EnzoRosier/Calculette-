@@ -4,9 +4,11 @@
     border: 3px solid rgb(65, 65, 65);
     border-radius: 5px;
     width: 40%;
+    
     margin-left: auto;
     margin-right: auto;
     grid-template-rows: 1fr 1fr 3fr;
+    height: 50%;
 }
 
 #control {
@@ -23,9 +25,12 @@ button {
     height: 2em;
     background-color: rgb(255, 255, 255);
     border-radius: 3px;
+    height: 100%;
     box-shadow: none;
     border: 1.2px solid rgb(157, 157, 157);
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 100%;
+    padding: 0;
 }
 
 button:hover {
@@ -123,15 +128,33 @@ button:hover {
     background-color: white;
     border-top: 1.2px solid rgb(157, 157, 157);
     border-bottom: 1.2px solid rgb(157, 157, 157);
+    margin: 0;
+}
+
+#screen p {
+    font-size: 1.5em;
 }
 
 #calculette p {
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-weight: bolder;
     padding: 0 10px;
+
 }
 
 #resultscreen {
     display: grid;
     grid-template-columns: 5fr 1fr 2fr;
+    justify-content: flex-end;
+    align-items: flex-end;
+
+}
+
+#resultscreen p {
+    font-size: 1.2em;
+    margin-bottom: 5px;
+}
+
+#resultscreen #equal {
+    text-align: center;
 }
