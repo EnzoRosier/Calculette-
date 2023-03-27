@@ -14,28 +14,28 @@
                 <p id="result"></p>
             </div>
             <div id="screen">
-                <p>1 + 2 </p>
+                <p></p>
             </div>
             <div id="control">
-                <button id="but0" type="button">0</button>
-                <button id="but1" type="button">1</button>
-                <button id="but2" type="button">2</button>
-                <button id="but3" type="button">3</button>
-                <button id="but4" type="button">4</button>
-                <button id="but5" type="button">5</button>
-                <button id="but6" type="button">6</button>
-                <button id="but7" type="button">7</button>
-                <button id="but8" type="button">8</button>
-                <button id="but9" type="button">9</button>
-                <button id="butcomma" type="button">.</button>
-                <button id="butplus" type="button">+</button>
-                <button id="but-" type="button">-</button>
-                <button id="butx" type="button">x</button>
-                <button id="butdivide" type="button">÷</button>
-                <button id="butopenP" type="button">(</button>
-                <button id="butcloseP" type="button"">)</button>
-                <button id="butC" type="button">C</button>
-                <button id="butequal" type="button">=</button>
+                <button id="but0" type="button" onclick="calculette.AddSymbole(0)">0</button>
+                <button id="but1" type="button" onclick="calculette.AddSymbole(1)">1</button>
+                <button id="but2" type="button" onclick="calculette.AddSymbole(2)">2</button>
+                <button id="but3" type="button" onclick="calculette.AddSymbole(3)">3</button>
+                <button id="but4" type="button" onclick="calculette.AddSymbole(4)">4</button>
+                <button id="but5" type="button" onclick="calculette.AddSymbole(5)">5</button>
+                <button id="but6" type="button" onclick="calculette.AddSymbole(6)">6</button>
+                <button id="but7" type="button" onclick="calculette.AddSymbole(7)">7</button>
+                <button id="but8" type="button" onclick="calculette.AddSymbole(8)">8</button>
+                <button id="but9" type="button" onclick="calculette.AddSymbole(9)">9</button>
+                <button id="butcomma" type="button" onclick="calculette.AddSymbole('.')">.</button>
+                <button id="butplus" type="button" onclick="calculette.AddSymbole('+')">+</button>
+                <button id="but-" type="button" onclick="calculette.AddSymbole('-')">-</button>
+                <button id="butx" type="button" onclick="calculette.AddSymbole('*')">x</button>
+                <button id="butdivide" type="button" onclick="calculette.AddSymbole('/')">÷</button>
+                <button id="butopenP" type="button" onclick="calculette.AddSymbole('(')">(</button>
+                <button id="butcloseP" type="button" onclick="calculette.AddSymbole(')')">)</button>
+                <button id="butC" type="button" onclick="calculette.RemoveSymbole()">C</button>
+                <button id="butequal" type="button" onclick="calculette.calculate()">=</button>
             </div>
         </div>
     </body>
