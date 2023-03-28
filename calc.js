@@ -16,12 +16,13 @@ class Calculette {
         this.resultScreen = resultScreen;
         this.formuleScreen = formuleScreen;
         this.screen = screen;
-        this.formule = []; //Liste contenant les opérateurs et opérandes
+        this.formule = [""]; //Liste contenant les opérateurs et opérandes
         this.cancel_list = [];
     }
 
     //Fonction qui met à jour l'affichage
     refreshScreens() {
+
         let resScreen = ""; //Expression à affiché
         this.formule.forEach((val) => {
             // Pour chaque opérateur/opérande
@@ -58,18 +59,31 @@ class Calculette {
 
     //Fonction qui enlève un symbole
     RemoveSymbole() {
+        this.cancel_list.push(this.formule.slice()); //Copie de l'array
         this.formule.pop();
         this.refreshScreens();
     }
 
     //Fonction qui rajoute un symbole
     AddSymbole(symb) {
+        this.cancel_list.push(this.formule.slice()); //Copie de l'array
         this.formule.push(symb);
         this.refreshScreens();
     }
 
+    //Fonction qui annule la dernière action effectue
+    Cancel() {
+        if (this.cancel_list.length > 0) { //Si des actions ont été faites
+            this.formuleScreen.innerHTML = "";
+            this.resultScreen.innerHTML = "";
+            this.formule = this.cancel_list.pop();
+            this.refreshScreens();
+        }
+    }
+
     //Fonction qui calcule la formule
     calculate() {
+        this.cancel_list.push(this.formule.slice());
         this.formuleScreen.innerHTML = this.screen.innerHTML; //On écrit la formule en haut a gauche de la calculette
         let expression = ""; //On initialise l'expression
         this.formule.forEach((val) => {

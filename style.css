@@ -112,6 +112,10 @@ button:hover {
     grid-area: 1 / 6 / 2 / 7;
 }
 
+#butcancel {
+    grid-area: 1 / 5 / 2 / 6;
+}
+
 /*#endregion ButtonGridPlacement*/
 
 #butequal {
